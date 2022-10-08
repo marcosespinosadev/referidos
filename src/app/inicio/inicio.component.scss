@@ -1,6 +1,14 @@
+$background-color: rgb(26, 26, 64);
+$cardOne-color: rgb(39, 0, 130);
+$cardTwo-color: rgb(122, 11, 192);
+$cardThree-color: rgb(250, 88, 182);
+$rotatingLine: rgb(240, 240, 240);
+$textColor: rgb(240, 240, 240);
+$textCardColor: rgb(240, 240, 240);
+
 body {
   height: 100vh;
-  background-color: rgb(26, 26, 64);
+  background-color: $background-color;
 }
 
 .content {
@@ -36,7 +44,7 @@ body {
         position: absolute;
         width: 20px;
         height: 500%;
-        background-color: rgb(240, 240, 240);
+        background-color: $rotatingLine;
         top: 50%;
         left: 50%;
         translate: -50% -50%;
@@ -45,8 +53,8 @@ body {
 
       &::after {
         content: attr(data-text);
-        color: rgb(240, 240, 240);
-        background-color: rgb(26, 26, 64);
+        color: $textColor;
+        background-color: $background-color;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -70,10 +78,10 @@ body {
         border: none;
         outline: none;
         font-size: 32px;
-        color: rgb(240, 240, 240);
+        color: $textCardColor;
         font-weight: 600;
         padding: 12px 24px;
-        background-color: rgb(49, 8, 123);
+        background-color: $cardOne-color;
         border-radius: 12px;
         margin-bottom: 16px;
         cursor: pointer;
@@ -89,7 +97,7 @@ body {
         border-bottom: 2px solid transparent;
         outline: none;
         font-size: 24px;
-        color: rgb(240, 240, 240);
+        color: $textColor;
         font-weight: 500;
         background-color: transparent;
         margin-top: 16px;
@@ -97,7 +105,7 @@ body {
         transition: all 0.2s;
 
         &:hover {
-          border-bottom: 2px solid rgb(240, 240, 240);
+          border-bottom: 2px solid $textColor;
         }
 
         &:active {
@@ -122,7 +130,7 @@ body {
       align-items: center;
       border-radius: 12px;
       font-size: 24px;
-      color: rgb(240, 240, 240);
+      color: $textCardColor;
       font-weight: 500;
       box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -143,17 +151,17 @@ body {
 
 .one {
   position: absolute;
-  background-color: rgb(39, 0, 130);
+  background-color: $cardOne-color;
   box-shadow: inset 12px 12px 24px rgba(0, 0, 0, 0.25);
 }
 .two {
   position: absolute;
-  background-color: rgb(122, 11, 192);
+  background-color: $cardTwo-color;
   box-shadow: inset 12px 12px 24px rgba(0, 0, 0, 0.25);
 }
 .three {
   position: absolute;
-  background-color: rgb(250, 88, 182);
+  background-color: $cardThree-color;
   box-shadow: inset 12px 12px 24px rgba(0, 0, 0, 0.25);
 }
 .first {
