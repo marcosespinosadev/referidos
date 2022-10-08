@@ -1,14 +1,20 @@
 $background-color: rgb(26, 26, 64);
 $cardOne-color: rgb(39, 0, 130);
 $cardTwo-color: rgb(80, 23, 115);
-$cardThree-color: rgb(235, 192, 173);
+$cardThree-color: rgb(190, 23, 115);
 $rotatingLine: rgb(240, 240, 240);
 $textColor: rgb(240, 240, 240);
 $textCardColor: rgb(240, 240, 240);
 
 body {
   height: 100vh;
-  background-color: $background-color;
+  background-image: radial-gradient(
+    ellipse at top left,
+    rgb(26, 26, 64) 0%,
+    rgb(26, 26, 64) 70.5%,
+    rgb(21, 21, 51) 70.5%,
+    rgb(21, 21, 51) 100%
+  );
 }
 
 .content {

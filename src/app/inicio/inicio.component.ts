@@ -29,11 +29,11 @@ export class InicioComponent implements OnInit, AfterViewInit {
       } else if (el.classList.contains('second')) {
         el.classList.remove('second');
         el.classList.add('first');
-        this.nextBtn.style.backgroundColor = 'rgb(250, 88, 182)';
+        this.nextBtn.style.backgroundColor = 'rgb(190, 23, 115)';
       } else if (el.classList.contains('third')) {
         el.classList.remove('third');
         el.classList.add('second');
-        this.nextBtn.style.backgroundColor = 'rgb(122, 11, 192)';
+        this.nextBtn.style.backgroundColor = 'rgb(80, 23, 115)';
       }
     });
   }
