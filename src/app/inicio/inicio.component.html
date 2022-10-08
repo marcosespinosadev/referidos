@@ -1,0 +1,40 @@
+<body>
+  <section class="content">
+    <div class="content__left">
+      <h2 class="content__left__title" data-text="Referidos">Referidos</h2>
+      <div class="content__left__buttons">
+        <button class="content__left__buttons__next" (click)="nextCard()">
+          Siguiente
+        </button>
+        <button
+          class="content__left__buttons__view"
+          (click)="viewCard(cardOne, cardTwo, cardThree)"
+        >
+          Ver
+        </button>
+      </div>
+    </div>
+
+    <div class="content__right">
+      <div class="content__right__card one first" id="cardOne" #cardOne>
+        <div class="content__right__card__cover">
+          <h2 class="content__right__card__cover__name">
+            Fernando<br />Barredo
+          </h2>
+        </div>
+      </div>
+      <div class="content__right__card two second" id="cardTwo" #cardTwo>
+        <div class="content__right__card__cover">
+          <h2 class="content__right__card__cover__name">Ignacio<br />Acosta</h2>
+        </div>
+      </div>
+      <div class="content__right__card three third" id="cardThree" #cardThree>
+        <div class="content__right__card__cover">
+          <h2 class="content__right__card__cover__name">
+            Lucas<br />Ibrentico
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
