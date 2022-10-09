@@ -33,6 +33,10 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   background-image: radial-gradient(
     ellipse at bottom left,
     rgb(80, 23, 115) 0%,
@@ -40,43 +44,79 @@ body {
     rgb(86, 28, 122) 85%,
     rgb(86, 28, 122) 100%
   );
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
   box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 20%;
+    height: 150%;
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    animation: rotateEffect 8.4s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: radial-gradient(
+      ellipse at bottom left,
+      rgb(80, 23, 115) 0%,
+      rgb(80, 23, 115) 85%,
+      rgb(86, 28, 122) 85%,
+      rgb(86, 28, 122) 100%
+    );
+    border: none;
+    border-radius: 16px;
+    inset: 1.2px;
+  }
 }
 
 .front {
   transform: perspective(1000px) rotateY(0deg);
+  font-size: 4vh;
 
   &__name {
-    font-size: 24px;
     color: rgba(240, 240, 240, 0.8);
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 75%;
+    z-index: 100;
   }
 
   &__role {
-    font-size: 32px;
     color: rgb(240, 240, 240);
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 125%;
+    z-index: 100;
+  }
+
+  &__about {
+    color: rgba(240, 240, 240, 0.6);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 80%;
+    font-size: 55%;
+    z-index: 100;
   }
 
   &__hint {
-    font-size: 16px;
     color: rgba(240, 240, 240, 0.4);
     text-align: center;
     text-transform: uppercase;
     font-weight: 500;
+    font-size: 35%;
+    z-index: 100;
   }
 }
 
 .back {
   transform: perspective(1000px) rotateY(180deg);
+  font-size: 4vh;
 
   &__group {
     display: flex;
@@ -84,25 +124,30 @@ body {
     justify-content: space-evenly;
     align-items: flex-start;
     width: 85%;
+    font-size: 100%;
+    z-index: 100;
 
     &__title {
-      font-size: 16px;
+      font-size: 75%;
       color: rgb(240, 240, 240);
       text-transform: uppercase;
       font-weight: 600;
+      z-index: 100;
     }
 
     &__item {
-      font-size: 12px;
+      font-size: 45%;
       color: rgb(240, 240, 240);
       text-transform: uppercase;
       font-weight: 500;
+      z-index: 100;
 
       &__date {
-        font-size: 12px;
+        font-size: 100%;
         color: rgba(240, 240, 240, 0.75);
         text-transform: uppercase;
         font-weight: 500;
+        z-index: 100;
       }
     }
   }
@@ -112,25 +157,29 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    z-index: 100;
 
     &__title {
-      font-size: 16px;
+      font-size: 75%;
       color: rgb(240, 240, 240);
       text-transform: uppercase;
       font-weight: 600;
-      margin-right: 6px;
+      margin-right: 0.54vh;
+      z-index: 100;
     }
 
     &__link {
-      width: 32px;
-      height: 32px;
-      margin-left: 6px;
+      width: 8%;
+      height: 80%;
+      margin-left: 0.54vh;
+      z-index: 100;
 
       &__icon {
-        width: 32px;
+        width: 100%;
         opacity: 0.8;
         cursor: pointer;
         transition: all 0.2s;
+        z-index: 100;
 
         &:hover {
           opacity: 1;
@@ -173,5 +222,14 @@ body {
 
   &__icon {
     width: 32px;
+  }
+}
+
+@keyframes rotateEffect {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
   }
 }
