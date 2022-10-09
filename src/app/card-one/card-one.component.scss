@@ -49,43 +49,45 @@ body {
 
 .front {
   transform: perspective(1000px) rotateY(0deg);
+  font-size: 4vh;
 
   &__name {
-    font-size: 20px;
     color: rgba(240, 240, 240, 0.8);
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 75%;
   }
 
   &__role {
-    font-size: 30px;
     color: rgb(240, 240, 240);
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 125%;
   }
 
   &__about {
-    font-size: 15px;
     color: rgba(240, 240, 240, 0.6);
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
     width: 80%;
+    font-size: 55%;
   }
 
   &__hint {
-    font-size: 10px;
     color: rgba(240, 240, 240, 0.4);
     text-align: center;
     text-transform: uppercase;
     font-weight: 500;
+    font-size: 35%;
   }
 }
 
 .back {
   transform: perspective(1000px) rotateY(180deg);
+  font-size: 4vh;
 
   &__group {
     display: flex;
@@ -93,6 +95,7 @@ body {
     justify-content: space-evenly;
     align-items: flex-start;
     width: 85%;
+    font-size: 100%;
 
     &__title {
       font-size: 80%;
