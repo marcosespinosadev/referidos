@@ -1,3 +1,10 @@
+//BREAKPOINTS FOR RESPONSIVE DESIGN
+$bp-bigger: 900px;
+$bp-big: 680px;
+$bp-medium: 580px;
+$bp-small: 460px;
+$bp-smallest: 380px;
+
 body {
   height: 100vh;
   background-image: radial-gradient(
@@ -26,6 +33,19 @@ body {
   font-weight: 500;
   backface-visibility: hidden;
   transition: all 1s;
+
+  @media screen and (max-width: $bp-big) {
+    width: 35vw;
+  }
+  @media screen and (max-width: $bp-medium) {
+    width: 45vw;
+  }
+  @media screen and (max-width: $bp-small) {
+    width: 55vw;
+  }
+  @media screen and (max-width: $bp-smallest) {
+    width: 65vw;
+  }
 }
 
 .front,
@@ -76,6 +96,10 @@ body {
   transform: perspective(1000px) rotateY(0deg);
   font-size: 4vh;
 
+  @media screen and (max-width: $bp-bigger) {
+    font-size: 3.2vh;
+  }
+
   &__name {
     color: rgba(240, 240, 240, 0.8);
     text-align: center;
@@ -117,6 +141,10 @@ body {
 .back {
   transform: perspective(1000px) rotateY(180deg);
   font-size: 4vh;
+
+  @media screen and (max-width: $bp-bigger) {
+    font-size: 3.2vh;
+  }
 
   &__group {
     display: flex;
@@ -160,7 +188,7 @@ body {
     z-index: 100;
 
     &__title {
-      font-size: 75%;
+      font-size: 55%;
       color: rgb(240, 240, 240);
       text-transform: uppercase;
       font-weight: 600;
@@ -212,6 +240,11 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 
+  @media screen and (max-width: $bp-small) {
+    top: 12px;
+    left: 12px;
+  }
+
   &:hover {
     opacity: 1;
   }
@@ -222,6 +255,9 @@ body {
 
   &__icon {
     width: 32px;
+    @media screen and (max-width: $bp-small) {
+      width: 18px;
+    }
   }
 }
 
