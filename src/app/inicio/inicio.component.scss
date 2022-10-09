@@ -1,6 +1,18 @@
 $background-color: rgb(26, 26, 64);
-$cardOne-color: rgb(39, 0, 130);
-$cardTwo-color: rgb(80, 23, 115);
+$cardOne-color: radial-gradient(
+  ellipse at bottom left,
+  rgb(39, 0, 130) 0%,
+  rgb(39, 0, 130) 85%,
+  rgb(47, 8, 138) 85%,
+  rgb(47, 8, 138) 100%
+);
+$cardTwo-color: radial-gradient(
+  ellipse at bottom left,
+  rgb(80, 23, 115) 0%,
+  rgb(80, 23, 115) 85%,
+  rgb(86, 28, 122) 85%,
+  rgb(86, 28, 122) 100%
+);
 $cardThree-color: rgb(190, 23, 115);
 $rotatingLine: rgb(240, 240, 240);
 $textColor: rgb(240, 240, 240);
@@ -87,7 +99,7 @@ body {
         color: $textCardColor;
         font-weight: 600;
         padding: 12px 24px;
-        background-color: $cardOne-color;
+        background-color: rgb(39, 0, 130);
         border-radius: 12px;
         margin-bottom: 16px;
         cursor: pointer;
@@ -147,8 +159,21 @@ body {
         justify-content: center;
 
         &__name {
+          font-size: 24px;
+          color: rgba(240, 240, 240, 0.8);
           text-align: center;
-          text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+          text-transform: uppercase;
+          font-weight: 600;
+          margin-bottom: 32px;
+        }
+
+        &__role {
+          font-size: 32px;
+          color: rgb(240, 240, 240);
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: 700;
+          margin-top: 32px;
         }
       }
     }
@@ -157,12 +182,12 @@ body {
 
 .one {
   position: absolute;
-  background-color: $cardOne-color;
+  background-image: $cardOne-color;
   box-shadow: inset 12px 12px 24px rgba(0, 0, 0, 0.25);
 }
 .two {
   position: absolute;
-  background-color: $cardTwo-color;
+  background-image: $cardTwo-color;
   box-shadow: inset 12px 12px 24px rgba(0, 0, 0, 0.25);
 }
 .three {
