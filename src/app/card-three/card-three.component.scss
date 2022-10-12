@@ -22,8 +22,8 @@ body {
 
 .card {
   position: relative;
-  height: 70vh;
-  width: 30vw;
+  height: 496px;
+  width: 348px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,9 +36,11 @@ body {
 
   @media screen and (max-width: $bp-big) {
     width: 35vw;
+    height: 512px;
   }
   @media screen and (max-width: $bp-medium) {
     width: 45vw;
+    height: 554px;
   }
   @media screen and (max-width: $bp-small) {
     width: 55vw;
