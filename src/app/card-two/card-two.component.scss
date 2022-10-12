@@ -94,11 +94,11 @@ body {
 
 .front {
   transform: perspective(1000px) rotateY(0deg);
-  font-size: 4vh;
-  @media screen and (max-width: $bp-bigger) {
-    font-size: 3.2vh;
-  }
+  font-size: 24px;
 
+  @media screen and (max-width: $bp-bigger) {
+    font-size: 18px;
+  }
   &__name {
     color: rgba(240, 240, 240, 0.8);
     text-align: center;
@@ -139,9 +139,10 @@ body {
 
 .back {
   transform: perspective(1000px) rotateY(180deg);
-  font-size: 4vh;
+  font-size: 24px;
+
   @media screen and (max-width: $bp-bigger) {
-    font-size: 3.2vh;
+    font-size: 17.8px;
   }
 
   &__group {
